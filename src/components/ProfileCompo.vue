@@ -17,11 +17,19 @@
     </div>
   </div>
 
+  <!-- <div>
+    <a :href="pdfPath" target="_blank" rel="noopener noreferrer">
+      <button>Ouvrir le PDF</button>
+    </a>
+  </div> -->
+
   <div class="search">
     <form role="search">
       <input class="form-control" type="search" placeholder="Rechercher..." aria-label="Search" />
-      <button class="btn" type="submit">Rechercher</button>
     </form>
+    <button class="btn" type="submit">
+      <img src="../assets/chercher.svg" alt="image de loop pour la recherche" />
+    </button>
   </div>
 
   <!-- <div>
@@ -33,9 +41,10 @@
 </template>
 
 <script>
+// import { ref } from 'vue'
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: 'Profile',
+  name: 'Profile'
 
   // data() {
   //   return {
@@ -44,6 +53,13 @@ export default {
   //   }
   // }
 }
+
+//  const searchQuery = ref('')
+
+// const handleSearch = () => {
+
+//   console.log('Recherche effectuée pour:', searchQuery.value)
+// }
 </script>
 
 <style>
@@ -104,27 +120,75 @@ export default {
 
 /* Bar de recherche */
 
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+
 .form-control {
   width: 500px;
   height: 44px;
   background: rgba(255, 255, 255, 0.1);
   border: 2px solid #ffffff;
-
-  border-radius: 25px;
+  border-radius: 25px 0 0 25px;
   padding: 13px;
   outline: none;
 }
+.search img {
+  width: 29px;
+  height: 29px;
+  padding: 5px;
+  /* border: none;
+  margin-left: 5px;
+  color: #f1f1f1; */
+
+  border-radius: 0 25px 25px 0;
+  /* background: #00a4a0; */
+}
+.search .btn {
+  border: none;
+  border-radius: 0 25px 25px 0;
+  background: #ffffff;
+}
+
+/* 
+.form-control {
+  width: 500px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #ffffff;
+  border-radius: 25px;
+  padding: 13px;
+  outline: none;
+  padding-right: 40px; 
+}
+
 .search {
   display: flex;
   justify-content: center;
   margin: 30px;
 }
+
 .search .btn {
   border: none;
-  padding: 5px;
+  padding: 10px; 
   margin-left: 5px;
   color: #f1f1f1;
   border-radius: 20px;
   background: #00a4a0;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
 }
+
+.search .btn i {
+  position: absolute; 
+  left: 10px; 
+  top: 50%; 
+  transform: translateY(-50%); 
+}
+
+ */
 </style>

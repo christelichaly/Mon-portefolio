@@ -70,7 +70,11 @@
     <button @click="showModal2 = true" class="btn">
       <a href="#"
         ><div class="CV">
-          <img class="img-cv" src="../assets/cahier-des-charges-ly.jpg" alt=" image cv ly" />
+          <img
+            class="img-cv"
+            src="../assets/cahier-des-charges-ly.jpg"
+            alt=" image cahier des charges"
+          />
           <h2>Cahier des charges</h2>
         </div></a
       >
@@ -92,10 +96,10 @@
           >
 
           <p>
-            Le deuxième devoir que j'ai réalisé, un cahier des charges, <br />
+            Le deuxième devoir que j'ai réalisé est un cahier des charges, <br />
             en tant qu'entreprise fictive. Le PDF est accessible en cliquant <br />
             sur l'image ci-contre ou avec le lien tout en bas de la modale. <br />
-            Les technologie utilisée pour la création est la suivante : <br />
+            Les technologie utilisées pour la création sont les suivantes : <br />
             <span
               ><a
                 href="https://www.adobe.com/products/indesign/campaign/pricing.html?gclid=Cj0KCQjw6oi4BhD1ARIsAL6pox0Ulw2JLfoRGyDLMA7e-TrxLHMLr8BSKxu_LJuW7KG1Vcaw572UlnAaAhqMEALw_wcB&sdid=YSYYFYJB&mv=search&mv2=paidsearch&ef_id=Cj0KCQjw6oi4BhD1ARIsAL6pox0Ulw2JLfoRGyDLMA7e-TrxLHMLr8BSKxu_LJuW7KG1Vcaw572UlnAaAhqMEALw_wcB:G:s&s_kwcid=AL!3085!3!356469619192!e!!g!!indesign!1711729601!70905759790&mv=search&gad_source=1"
@@ -131,7 +135,7 @@
       </div>
 
       <div class="footer">
-        <a :href="pdfPath" target="_blank"><h3>Ouvrir le PDF</h3></a>
+        <a :href="pdfPath" target="_blank"><h3>Ouvrir le cahier des charges</h3></a>
       </div>
     </Modal>
 
@@ -333,14 +337,16 @@ export default {
     Modal
     // VuePdfEmbed
   },
+
   data() {
     return {
       showModal1: false, // État de la modale pour le projet 1
       showModal2: false, // État de la modale pour le projet 2
       showModal3: false, // État de la modale pour le projet 3
-      pdfPath: '../assets/cahier-des-charges.pdf' // Chemin vers ton fichier PDF
+      pdfPath: '/cahier-des-charges.pdf' // Chemin vers le fichier PDF
     }
   }
+
   // methods: {
   //   openModal(modalNumber) {
   //     this[`showModal${modalNumber}`] = true
@@ -594,7 +600,7 @@ img {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow: 100%;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
 }

@@ -8,9 +8,16 @@
 
       <nav class="navbar">
         <RouterLink to="/">Portefolio</RouterLink>
-        <RouterLink to="/creations">Creations</RouterLink>
+        <RouterLink to="#creations">Creations </RouterLink>
+        <RouterLink to="#apropos">À Propos </RouterLink>
+        <RouterLink to="#contact">Contact </RouterLink>
+        <!-- <a href="#creations">Creations</a>
+        <a href="#apropos">À Propos</a>
+        <a href="#contact">Contact</a> -->
+        <!-- 
+        <RouterLink to="/#creations">Creations</RouterLink>
         <RouterLink to="/Apropos">À Propos</RouterLink>
-        <RouterLink to="/contact">Contact</RouterLink>
+        <RouterLink to="/Contact">Contact</RouterLink> -->
       </nav>
     </header>
 
@@ -18,6 +25,12 @@
 
     <RouterView />
 
+    <!-- <section id="lien">
+      <div>
+        <h1>Utilisation de liens d'encrage</h1>
+        <p>Vérifier l'utilisation des liens d'encrage</p>
+      </div>
+    </section> -->
     <!-- footer /> -->
     <div class="footer">
       <div class="footer-content">
@@ -56,13 +69,41 @@
 
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+// import { onMounted, onUnmounted } from 'vue'
+
+//onMounted(() => {
+// const header = document.querySelector('header')
+// const stickyScrollPoint = 200 // Point de défilement (en pixels) pour rendre le header fixe
+
+// const handleScroll = () => {
+//   if (header) {
+// Vérification pour s'assurer que 'header' n'est pas null
+//       if (window.scrollY > stickyScrollPoint) {
+//         header.classList.add('header-fixed')
+//       } else {
+//         header.classList.remove('header-fixed')
+//       }
+//     }
+//   }
+
+//   window.addEventListener('scroll', handleScroll)
+
+//   onUnmounted(() => {
+//     window.removeEventListener('scroll', handleScroll)
+//   })
+// })
 </script>
+
 <style scoped>
 @media (min-width: 1024px) {
   .app {
     min-height: 100vh;
     display: flex;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* Le fond du site */
@@ -76,7 +117,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
 /* Header */
 header {
-  width: 100%; /* Assure-toi que le header prend toute la largeur de la page */
+  width: 100%;
   height: 80px;
   position: fixed; /* Rend le header fixe */
   top: 0; /* Positionne le header en haut de la page */
@@ -89,7 +130,17 @@ header {
   background: #295560;
   padding: 20px;
   margin-bottom: 20px;
+  transition: all 0.3s;
 }
+
+/* .header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+} */
 
 .logo img {
   height: 5rem;

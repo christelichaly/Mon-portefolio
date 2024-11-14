@@ -49,11 +49,16 @@
 .about {
   align-items: center;
   color: #f1f1f1;
+  margin-top: 90px;
+}
+.title {
+  color: #1e001b;
 }
 .description {
   width: 600px;
   height: 500px;
-  background-color: #fff;
+  background-color: #f1f1f1;
+  /* box-shadow: 3px 3px 7px 3px #1e001b; */
 }
 h2 {
   background-color: #1e001b;

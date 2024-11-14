@@ -25,7 +25,8 @@
     </div>
     <div class="map">
       <a
-        href="https://fr.mappy.com/activite/telephonie-installation#?bbox=2.3960591056734586%2C48.845093986515025%2C2.45685305508664%2C48.86988858353024"
+        href="https://fr.mappy.com/activite/telephonie-installation#?bbox=2.3960591056734586%2C48.845093986515025%2C2.45685305508664%2C48.86988858353024 "
+        target="_blank"
         ><img src="../assets/map-adresse.png" alt="image map"
       /></a>
     </div>
@@ -82,6 +83,9 @@ input[type='submit']:hover {
   background-color: #f2f2f2;
   padding: 20px;
 }
+.contact_container:hover {
+  background-color: #ffffff;
+}
 .contact {
   display: flex;
   justify-content: space-between;
@@ -92,5 +96,8 @@ input[type='submit']:hover {
   width: 500px;
   height: 500px;
   border-radius: 5px;
+}
+.map img:hover {
+  opacity: 0.5;
 }
 </style>
